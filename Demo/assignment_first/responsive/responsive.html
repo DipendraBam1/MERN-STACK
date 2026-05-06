@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figma_responsive</title>
+    <style>
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Josefin Sans;
+  font-size: inherit;
+  font-weight: inherit;
+} 
+ 
+.header{
+    display: flex;
+    background-color: rgb(129, 26, 225);
+    color:whitesmoke;
+    width: 100%;
+    padding:12px;
+    gap: 12px;
+ }
+ .navbar{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+ }
+ .navbar {
+  flex-wrap: wrap;
+  width: 100%;
+}
+ .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ 
+ }
+ .gmail-contact{
+    display: flex;
+    gap: 12px;
+ }
+ .information{
+    display: flex;
+    gap:20px;
+    margin-left:auto;
+ }
+.info{
+color:whitesmoke;
+background-color: transparent;
+border: none;
+}
+img{
+    width: 20px;
+    height: 20px;
+ }
+ .login,
+.whishlist,
+.cart{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+ 
+.home{
+    color: rgb(212, 26, 150);
+}
+.search{
+     position: relative;
+    margin-left: 100px;
+    width: 250px;
+ }
+.search img{
+position: absolute;
+background-color: rgb(212, 26, 150);
+}
+.search img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px; 
+    width: 40px;
+    background-color: rgb(212, 26, 150);
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.search input{
+    width: 100%;
+    height: 40px;
+    padding-right: 45px; 
+    box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #F2F0FF;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+ .content {
+  max-width: 500px;
+}
+
+.tagline {
+  color: #ff3f8e;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111;
+}
+
+.desc {
+  margin: 20px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.btn {
+  background: #ff2f92;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.bulb_img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.bulb_img img {
+  display: block;
+  margin-top: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+ 
+}
+ 
+ /* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .main {
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .search {
+    margin-left: 20px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .information {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .bulb_img img,
+  .chair_img img {
+    width: 250px !important;
+    height: auto !important;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .search {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 12px;
+  }
+
+  .nav p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+ 
+
+.bulb_img,
+.chair_img {
+  display: flex;
+  align-items: flex-start;
+}
+
+.bulb_img img {
+  margin-top: 0;
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+<div class="gmail-contact">
+        <img src="https://img.icons8.com/?size=100&id=4pM4OmHKW2G4&format=png&color=FFFFFF" alt="">
+         <p>mhhasanul@gmail.com</p>
+         
+          <img src="https://img.icons8.com/?size=100&id=BBf95mK0q8NH&format=png&color=FFFFFF" alt="">
+<p>(12345)67890</p>
+</div>
+
+<div class="information">
+
+ <select class="info" name="language">
+  <option value="English">English</option>
+  <option value="Nepali">Nepali</option>
+  <option value="Hindi">Hindi</option>
+</select>
+
+<select class="info" name="currency">
+  <option value="USD">USD</option>
+  <option value="NPR">NPR</option>
+ </select>
+<div class="login">
+  <button class="info">Login</button>
+  <img src="https://img.icons8.com/?size=100&id=WNS8XGkd1Rhp&format=png&color=FFFFFF" alt="">
+</div>
+
+<div class="whishlist">
+ <button class="info">Wishlist</button>
+ <img src="https://img.icons8.com/?size=100&id=85038&format=png&color=FFFFFF" alt="">
+</div>
+
+<div class="cart">
+<img src="https://img.icons8.com/?size=100&id=85080&format=png&color=FFFFFF" alt=""></div>
+</div>
+
+    </div>
+
+    <div class="navbar">
+<div class="nav">
+    <h1 style="font-family:Josefin Sans;font-size: 30px;font-weight:bold;margin-right: 40px;">Hekto</h2>
+
+    <select class="info home" name="home">
+  <option value="Home">Home</option>
+  <option value="About">About</option>
+ </select>
+
+<p>Pages</p> 
+<p>Product</p> 
+<p>Blog</p> 
+<p>Shop</p> 
+<p>Contact</p> 
+
+<div class="search">
+<input type="text">
+<img src="https://img.icons8.com/?size=100&id=59878&format=png&color=FFFFFF" alt="">
+</div>
+</div>
+    </div>
+    
+</body>
+</html>
