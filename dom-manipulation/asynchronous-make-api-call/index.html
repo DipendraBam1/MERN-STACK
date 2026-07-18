@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <pre>
+on click of below button fetch todos and display the title and completed status in a table
+    </pre> -->
+
+    <button onclick="fetchTodos()"> fetch data from api. </button>
+
+    <!-- create a table here -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+</body>
+
+<script>
+
+    function fetchTodos() {
+
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => {
+
+                let tbody = document.getElementById("tbody");
+
+                json.forEach((todo) => {
+
+                    tbody.innerHTML += `
+                    
+                    <tr>
+                        <td>${todo.title}</td>
+                        <td>${todo.completed}</td>
+                    </tr>
+                    
+                    `;
+
+                });
+
+            })
+
+    }
+
+</script>
+
+</html>

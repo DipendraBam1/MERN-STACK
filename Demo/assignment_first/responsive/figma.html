@@ -22,7 +22,7 @@
     <!-- TOP NAV -->
     <nav class="bg-[#7E33E0] text-white text-sm py-4">
       <div class="max-w-7xl mx-auto px-4 flex justify-between">
-        <div class="flex gap-3">
+        <div class="flex gap-2">
           <img
             class="h-5 w-5"
             src="https://img.icons8.com/?size=100&id=4pM4OmHKW2G4&format=png&color=FFFFFF"
@@ -66,8 +66,17 @@
       >
         <h1 class="text-2xl font-bold">Hekto</h1>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex gap-6 items-center">
+        <!-- Menu -->
+        <div
+          id="navItems"
+          class="fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg p-6 flex flex-col gap-6 transform translate-x-full transition-transform duration-300 md:static md:translate-x-0 md:flex md:flex-row md:h-auto md:w-auto md:shadow-none"
+        >
+          <span
+            id="closeBtn"
+            class="absolute top-2 right-2 cursor-pointer text-2xl md:hidden"
+          >
+            &times;
+          </span>
           <a href="#">Home</a>
           <a href="#">Pages</a>
           <a href="#">Product</a>
@@ -326,7 +335,7 @@
         <div class="p-6 flex justify-center">
           <img src="delivery.png" class="h-12 object-contain" />
         </div>
-        <div class="flex flex-col items-center mb-5 ">
+        <div class="flex flex-col items-center mb-5">
           <h3
             class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold mt-0 mb-3 md:text-2xl"
           >
@@ -338,13 +347,13 @@
           >
         </div>
       </div>
-   <div
+      <div
         class="bg-white rounded-lg shadow-md overflow-hidden text-center p-4"
       >
         <div class="p-6 flex justify-center">
           <img src="cashback 1.png" class="h-12 object-contain" />
         </div>
-        <div class="flex flex-col items-center mb-5 ">
+        <div class="flex flex-col items-center mb-5">
           <h3
             class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold mt-0 mb-3 md:text-2xl"
           >
@@ -356,13 +365,13 @@
           >
         </div>
       </div>
-     <div
+      <div
         class="bg-white rounded-lg shadow-md overflow-hidden text-center p-4"
       >
         <div class="p-6 flex justify-center">
           <img src="premium-quality 1.png" class="h-12 object-contain" />
         </div>
-        <div class="flex flex-col items-center mb-5 ">
+        <div class="flex flex-col items-center mb-5">
           <h3
             class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold mt-0 mb-3 md:text-2xl"
           >
@@ -380,7 +389,7 @@
         <div class="p-6 flex justify-center">
           <img src="24-hours-support 1.png" class="h-12 object-contain" />
         </div>
-        <div class="flex flex-col items-center mb-5 ">
+        <div class="flex flex-col items-center mb-5">
           <h3
             class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold mt-0 mb-3 md:text-2xl"
           >
@@ -393,6 +402,380 @@
         </div>
       </div>
     </div>
+    <!-- next-hero -->
+    <br />
+    <br />
+    <div class="bg-[#F2F0FF] px-6 py-16">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12"
+      >
+        <!-- LEFT IMAGE -->
+        <div class="relative w-full md:w-1/2 flex justify-center">
+          <!-- background circle -->
+
+          <img src="sofa.png" class="w-69 md:w-90 relative z-10" />
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h1
+            class="font-[Josefin Sans] text-[#151875] text-3xl md:text-4xl font-bold leading-tight"
+          >
+            Unique Features Of leatest & <br />
+            Trending Products
+          </h1>
+
+          <!-- FEATURES -->
+          <ul class="mt-6 space-y-3 text-sm text-gray-500">
+            <li class="flex items-start gap-3 justify-center md:justify-start">
+              <span class="w-2 h-2 bg-pink-500 rounded-full mt-2"></span>
+              All frames constructed with hardwood solids and laminates
+            </li>
+
+            <li class="flex items-start gap-3 justify-center md:justify-start">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
+              Reinforced with double wood dowels, glue, screw nails
+            </li>
+
+            <li class="flex items-start gap-3 justify-center md:justify-start">
+              <span class="w-2 h-2 bg-green-400 rounded-full mt-2"></span>
+              Arms, backs and seats are structurally reinforced
+            </li>
+          </ul>
+
+          <!-- BUTTON + PRODUCT -->
+          <div
+            class="mt-8 flex flex-col md:flex-row items-center md:items-start gap-4"
+          >
+            <button
+              class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded"
+            >
+              Add To Cart
+            </button>
+
+            <div class="text-center md:text-left">
+              <p class="text-[#151875] font-semibold">B&B Italian Sofa</p>
+              <p class="text-gray-500 text-sm">$32.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1
+      class="font-[Josefin Sans] text-[#151875] text-xl my-10 mb-6 flex justify-center md:text-4xl font-bold"
+    >
+      Trending products
+    </h1>
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div
+        class="bg-[#F6F7FB] rounded-lg shadow-md overflow-hidden text-center"
+      >
+        <div class="p-6 flex justify-center">
+          <img src="p2.png" class="h-32 object-contain" />
+        </div>
+        <div class="bg-white flex flex-col justify-center items-center py-2">
+          <h3 class="text-pink-500 font-semibold">Cever chair</h3>
+
+          <div class="flex gap-3 items-center">
+            <p class="text-gray-400 text-sm line-through">$52.00</p>
+            <p class="text-red-500 font-semibold">$42.00</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#F6F7FB] rounded-lg shadow-md overflow-hidden text-center"
+      >
+        <div class="p-6 flex justify-center">
+          <img src="p4.png" class="h-32 object-contain" />
+        </div>
+        <div class="bg-white flex flex-col justify-center items-center py-2">
+          <h3 class="text-pink-500 font-semibold mr-5 underlined-[#EEEFFB]">
+            Cever chair
+          </h3>
+          <div class="flex gap-3 items-center">
+            <p class="text-gray-400 text-sm line-through mr-2">$90.00</p>
+            <p class="text-red-500 font-semibold">$85.00</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#F6F7FB] rounded-lg shadow-md overflow-hidden text-center"
+      >
+        <div class="p-6 flex justify-center">
+          <img src="p1.png" class="h-32 object-contain" />
+        </div>
+        <div class="bg-white flex flex-col justify-center items-center py-2">
+          <h3 class="text-pink-500 font-semibold mr-5 underlined-[#EEEFFB]">
+            Cever chair
+          </h3>
+          <div class="flex gap-3 items-center">
+            <p class="text-gray-400 text-sm line-through mr-2">$72.00</p>
+            <p class="text-red-500 font-semibold">$65.00</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#F6F7FB] rounded-lg shadow-md overflow-hidden text-center"
+      >
+        <div class="p-6 flex justify-center">
+          <img src="b4.png" class="h-32 object-contain" />
+        </div>
+        <div class="bg-white flex flex-col justify-center items-center py-2">
+          <h3 class="text-pink-500 font-semibold mr-5 underlined-[#EEEFFB]">
+            Cever chair
+          </h3>
+          <div class="flex gap-3 items-center">
+            <p class="text-gray-400 text-sm line-through mr-2">$67.00</p>
+            <p class="text-red-500 font-semibold">$55.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto p-3 mt-12 grid grid-cols-2 md:grid-cols-3 gap-3"
+    >
+      <div class="bg-pink-50 rounded-lg shadow-md overflow-hidden p-4">
+        <h3
+          class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold mt-3 mb-3 md:text-2xl"
+        >
+          23% Off in all products
+        </h3>
+
+        <button
+          class="text-pink-600 underline decoration-pink-600 underline-offset-4"
+        >
+          Shop Now
+        </button>
+        <img src="off.png" class="h-32 ml-auto object-contain md:h-40" />
+      </div>
+      <div class="bg-[#F1F0FF] rounded-lg shadow-md overflow-hidden p-4">
+        <h3
+          class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold mt-3 mb-3 md:text-2xl"
+        >
+          23% Off in all products
+        </h3>
+
+        <button
+          class="text-pink-600 underline decoration-pink-600 underline-offset-4"
+        >
+          View Collection
+        </button>
+        <img src="box.png" class="h-32 ml-auto object-contain md:h-40" />
+      </div>
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden text-center p-4"
+      >
+        <div class="flex items-center mb-1 md:mb-3">
+          <img
+            src="right1.png"
+            class="h-12 w-12 p-1 bg-[#F5F6F8] object-contain md:h-20 w-20"
+          />
+          <div class="flex flex-col ml-2 md:ml-5">
+            <h3
+              class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold md:text-xl"
+            >
+              Executive Seat Chair
+            </h3>
+
+            <h3
+              class="font-[Josefin Sans] text-[#151875] text-sm text-sm line-through md:text-xl"
+            >
+              $52.00
+            </h3>
+          </div>
+        </div>
+        <div class="flex items-center mb-1 md:mb-3">
+          <img
+            src="right2.png"
+            class="h-11 w-11 p-1 bg-[#F5F6F8] object-contain md:h-20 w-20"
+          />
+          <div class="flex flex-col ml-2 md:ml-5">
+            <h3
+              class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold md:text-xl"
+            >
+              Executive Seat Chair
+            </h3>
+
+            <h3
+              class="font-[Josefin Sans] text-[#151875] text-sm text-sm line-through md:text-xl"
+            >
+              $45.00
+            </h3>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <img
+            src="right3.png"
+            class="h-11 w-11 p-1 bg-[#F5F6F8] object-contain md:h-20 w-20"
+          />
+          <div class="flex flex-col ml-2 md:ml-5">
+            <h3
+              class="font-[Josefin Sans] text-[#151875] text-sm font-extrabold md:text-xl"
+            >
+              Executive Seat Chair
+            </h3>
+
+            <h3
+              class="font-[Josefin Sans] text-[#151875] text-sm text-sm line-through md:text-xl"
+            >
+              $67.00
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 h-full">
+      <h1
+        class="font-[Josefin Sans] text-[#151875] text-xl my-10 mb-6 flex justify-center md:text-4xl font-bold"
+      >
+        Discount Product
+      </h1>
+      <div>
+        <ul
+          class="flex justify-center font-[Lato] gap-15 mt-4 text-[#151875] md:text-xl"
+        >
+          <a href="" class="text-[#FB2E86] underline underline-offset-4"
+            >Wood Chair</a
+          >
+          <a href="" class="">Plastic Chair</a>
+          <a href="">Sofa Collection</a>
+        </ul>
+      </div>
+      <div class="py-0">
+        <div
+          class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10"
+        >
+          <!-- LEFT CONTENT -->
+          <div class="w-full md:w-1/2">
+            <h2 class="text-[#151875] text-2xl md:text-4xl font-bold mb-4">
+              20% Discount Of All Products
+            </h2>
+
+            <p class="text-pink-500 font-semibold mb-2">Eams Sofa Compact</p>
+
+            <p class="text-gray-400 text-sm mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget
+              feugiat habitasse nec, bibendum condimentum.
+            </p>
+
+            <!-- FEATURES -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-500 mb-6"
+            >
+              <div class="flex items-center gap-2">
+                <span class="text-pink-500">✔</span> Material expose like metals
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-pink-500">✔</span> Clear lines and geometric
+                figures
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-pink-500">✔</span> Simple neutral colours
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-pink-500">✔</span> Material expose like metals
+              </div>
+            </div>
+
+            <!-- BUTTON -->
+            <button
+              class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded"
+            >
+              Shop Now
+            </button>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="w-full md:w-1/2 flex justify-center relative">
+            <!-- chair image -->
+            <img
+              src="sofa2.png"
+              class="relative z-10 w-80 md:w-[500px] lg:w-[600px]"
+            />
+          </div>
+        </div>
+      </div>
+      <h1
+        class="font-[Josefin Sans] text-[#151875] text-xl my-10 mb-6 flex justify-center md:text-4xl font-bold"
+      >
+        Top Categories
+      </h1>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-4 mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
+    >
+    <div class="flex flex-col justify-center items-center">
+       <div class="w-40 h-40 rounded-full shadow-md bg-[#F6F7FB] flex justify-center items-center md:h-56 md:w-56">
+    <img src="p1.png" class="h-24 object-contain md:h-29" />
+  </div>
+
+  <div class="text-[#151875] text-center mt-3">
+    <h3 class="font-semibold">Cantilever chair</h3>
+    <p class="font-semibold">$42.00</p>
+  </div>
+    </div>
+  
+ 
+    <div class="flex flex-col justify-center items-center">
+       <div class="w-40 h-40 rounded-full shadow-md bg-[#F6F7FB] flex justify-center items-center md:h-56 md:w-56">
+    <img src="p2.png" class="h-24 object-contain md:h-29" />
+  </div>
+
+  <div class="text-[#151875] text-center mt-3">
+    <h3 class="font-semibold">Cantilever chair</h3>
+    <p class="font-semibold">$42.00</p>
+  </div>
+    </div>
+
+          <div class="flex flex-col justify-center items-center">
+       <div class="w-40 h-40 rounded-full shadow-md bg-[#F6F7FB] flex justify-center items-center md:h-56 md:w-56">
+    <img src="p3.png" class="h-24 object-contain md:h-29" />
+  </div>
+
+  <div class="text-[#151875] text-center mt-3">
+    <h3 class="font-semibold">Cantilever chair</h3>
+    <p class="font-semibold">$42.00</p>
+  </div>
+    </div>
+          <div class="flex flex-col justify-center items-center">
+       <div class="w-40 h-40 rounded-full shadow-md bg-[#F6F7FB] flex justify-center items-center md:h-56 md:w-56">
+    <img src="p4.png" class="h-24 object-contain md:h-29" />
+  </div>
+
+  <div class="text-[#151875] text-center mt-3">
+    <h3 class="font-semibold">Cantilever chair</h3>
+    <p class="font-semibold">$42.00</p>
+  </div>
+    </div>
+    </div>
+    <div class="flex justify-center items-center gap-2 mt-6">
+  <span class="w-3 h-3 bg-pink-500 rounded-full scale-125 transition"></span>
+  <span class="w-3 h-3 bg-pink-200 rounded-full hover:bg-pink-400 transition"></span>
+  <span class="w-3 h-3 bg-pink-200 rounded-full hover:bg-pink-400 transition"></span>
+</div>
+<div class="relative mt-8">
+
+  <!-- IMAGE -->
+  <img src="bgrd.png" class="w-full h-[250px] object-cover md:h-[400px]" />
+
+  <!-- OVERLAY CONTENT -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-center">
+
+    <h1 class="font-[Josefin Sans] text-[#151875] text-2xl mt-8 md:text-4xl font-bold mb-4">
+Get Leatest Update By Subscribe <br>
+0ur Newslater    </h1>
+
+    <button class="bg-pink-500 mt-5 hover:bg-pink-600 text-white px-6 py-2 rounded md:mt-10">
+      Shop Now
+    </button>
+
+  </div>
+  <div class="flex justify-center m-4 md:m-8">
+    <img class="h-25" src="logos.png" alt="">
+  </div>
+ 
+</div>
     <script>
       const menuBtn = document.getElementById("menuBtn");
       const navItems = document.getElementById("navItems");
@@ -400,13 +783,15 @@
       const overlay = document.getElementById("overlay");
 
       function openMenu() {
-        navItems.classList.remove("hidden");
+        navItems.classList.remove("translate-x-full");
         overlay.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
       }
 
       function closeMenu() {
-        navItems.classList.add("hidden");
+        navItems.classList.add("translate-x-full");
         overlay.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
       }
 
       menuBtn.addEventListener("click", openMenu);
