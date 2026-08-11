@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import "dotenv/config";
-const cors = require("cors");
 
+const cors = require("cors");
 require("./models/index");
 
 import authRoutes from "./routes/auth";
@@ -31,5 +31,14 @@ app.get("/", (_req: Request, res: Response) => {
     message: "Welcome to my API",
   });
 });
+
+// Run server locally
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 3000;
+
+  app.listen(PORT, () => {
+    console.log(`Server running on ${PORT}`);
+  });
+}
 
 export default app;
