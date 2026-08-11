@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
 import "dotenv/config";
+import cors from "cors";
 
-const cors = require("cors");
-require("./models/index");
+import "./models/index";
 
 import authRoutes from "./routes/auth";
 import productRoute from "./routes/productRoutes";
@@ -32,7 +32,6 @@ app.get("/", (_req: Request, res: Response) => {
   });
 });
 
-// Run server locally
 if (!process.env.VERCEL) {
   const PORT = process.env.PORT || 3000;
 
