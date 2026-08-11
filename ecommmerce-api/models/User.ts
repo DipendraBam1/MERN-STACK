@@ -1,10 +1,9 @@
-const {DataTypes} = require("sequelize");
-const sequelize = require("../connections/database");
+import {DataTypes} from "sequelize";
+import sequelize from "../connections/database";
 const User = sequelize.define(
   "User",
   {
-    // Model attributes are defined here
-    firstName: {
+     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -31,4 +30,4 @@ const User = sequelize.define(
     timestamps: true,
   },
 );
-module.exports = User;
+ export default User;

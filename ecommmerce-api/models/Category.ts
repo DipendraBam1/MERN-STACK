@@ -1,6 +1,6 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../connections/database");
-const User = require("./User");
+import {DataTypes} from "sequelize";
+import sequelize from "../connections/database";
+import User from "./User";
 
 const Category = sequelize.define(
   "Category",
@@ -27,4 +27,4 @@ const Category = sequelize.define(
     timestamps: true,
   },
 );
-module.exports = Category;
+export default Category;

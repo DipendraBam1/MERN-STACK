@@ -1,7 +1,8 @@
+import { Request, Response } from "express";
 const { categorySchema } = require("../validation/schema");
-const Category = require("../models/Category");
+import Category from "../models/Category";
 
-const createcategory =async (req, res) => {
+const createcategory =async (req:Request,res:Response) => {
   const parsed = categorySchema.safeParse(req.body);
   console.log(parsed);
   if (!parsed.success) {
@@ -10,6 +11,11 @@ const createcategory =async (req, res) => {
       .json({ message: "Invalid input", errors: parsed.error.flatten() });
   }
   const { categoryName, parentCatId } = parsed.data;
+  if (!req.user) {
+  return res.status(401).json({
+    message: "Unauthorized",
+  });
+}
   try {
     const category = await Category.create({
       categoryName,
@@ -24,7 +30,7 @@ const createcategory =async (req, res) => {
     res.status(500).json({ message: "Error creating category" });
   }
 }
-const getcategories = async (req, res) => {
+const getcategories = async (req:Request,res:Response) => {
   let categories = await Category.findAll({
     where: {
       parentCatId: null,
@@ -39,7 +45,12 @@ const getcategories = async (req, res) => {
     data: categories,
   });
 };
-  const deletecategory = async (req, res) => {
+  const deletecategory = async (req:Request,res:Response) => {
+    if (!req.user) {
+  return res.status(401).json({
+    message: "Unauthorized",
+  });
+}
   try {
     const deletedRows = await Category.destroy({
       where: {
@@ -58,11 +69,12 @@ const getcategories = async (req, res) => {
       message: "category deleted successfully",
     });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({
-      message: "Error deleting category",
-      error: err.message,
-    });
-  }
+  const message = err instanceof Error ? err.message : "Unknown error";  // previously i use stack but here message 
+
+  res.status(500).send({
+    msg: "SERVER error",
+    error: message,
+  });
+}
 };
-module.exports = {createcategory,getcategories,deletecategory};
+export {createcategory,getcategories,deletecategory};

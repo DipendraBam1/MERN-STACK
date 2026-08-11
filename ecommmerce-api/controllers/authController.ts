@@ -1,10 +1,11 @@
-const { signupSchema, loginSchema } = require("../validation/schema");
-const User = require("../models/User");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+import { signupSchema, loginSchema } from "../validation/schema";
+import bcrypt from "bcrypt";
+import { Request, Response } from "express";
+import jwt from "jsonwebtoken";
+import User from "../models/User";
 const JWT_SECRET = process.env.JWT_SECRET;
 
-const signup  =  async (req, res) => {
+const signup = async (req: Request, res: Response) => {
   const parsed = signupSchema.safeParse(req.body);
   console.log(parsed);
   if (!parsed.success) {
@@ -16,9 +17,9 @@ const signup  =  async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     let user = await User.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
+      firstName,
+      lastName,
+      email,
       password: hashedPassword,
       role: req.body.role,
     });
@@ -29,9 +30,9 @@ const signup  =  async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Error creating user" });
   }
-}
+};
 
-const login = async (req, res) => {
+const login = async (req: Request, res: Response) => {
   const parsed = loginSchema.safeParse(req.body);
   if (!parsed.success) {
     return res
@@ -52,15 +53,18 @@ const login = async (req, res) => {
   }
 
   try {
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.getDataValue("password"));
     if (!isMatch) {
       return genericFail();
     }
+    if (!JWT_SECRET) {
+      throw new Error("JWT_SECRET environment variable is required");
+    }
     const token = jwt.sign(
       {
-        id: user.id,
-        email: user.email,
-        role: user.role,
+        id: user.getDataValue("id"),
+        email: user.getDataValue("email"),
+        role: user.getDataValue("role"),
       },
       JWT_SECRET,
       {
@@ -73,6 +77,5 @@ const login = async (req, res) => {
 
     res.status(500).json({ message: "Error during login" });
   }
-}
-
-module.exports ={signup,login}
+};
+export { signup, login };

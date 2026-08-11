@@ -1,9 +1,10 @@
-const Category = require("./Category");
-const User = require("./User");
-const Product = require("./Product");
-const Cart = require("./Cart");
-const Order = require("./order");
-const OrderItem = require("./OrderItems");
+import Category from "./Category";
+import User from "./User";
+import Product from "./Product";
+import Cart from "./Cart";
+import Order from "./Order";
+import OrderItem from "./OrderItems";
+import ProductImage from "./ProductImage";
 
 User.hasMany(Product, {
   foreignKey: "UserId",
@@ -14,17 +15,19 @@ Product.belongsTo(User, {
   foreignKey: "UserId",
 });
 
-Category.hasMany(Product, {
-  foreignKey: "CategoryId",
-});
 Category.hasMany(Category, {
   foreignKey: "parentCatId",
   as: "subCategories",
 });
-Product.belongsTo(Category, {
+Category.hasMany(Product, {
   foreignKey: "CategoryId",
+  as: "products",
 });
 
+Product.belongsTo(Category, {
+  foreignKey: "CategoryId",
+  as: "category",
+});
 User.hasMany(Cart, 
 { foreignKey: "userId" });
 
@@ -46,3 +49,8 @@ OrderItem.belongsTo(Order);
 
 Product.hasMany(OrderItem);
 OrderItem.belongsTo(Product);
+
+Product.hasMany(ProductImage,
+{ foreignKey: "productId" ,
+  as :"images"}
+);
