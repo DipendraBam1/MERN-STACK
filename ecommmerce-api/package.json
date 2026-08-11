@@ -24,8 +24,7 @@
     "typescript": "^7.0.2"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "tsx watch server.ts",
-    "old-dev": "nodemon server.js"
+    "start": "tsx server.ts",
+    "dev": "tsx watch server.ts"
   }
 }
